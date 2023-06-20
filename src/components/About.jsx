@@ -1,7 +1,6 @@
-import React from 'react'
 import {Tilt} from 'react-tilt';
 import { motion } from 'framer-motion';
-
+import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import {services} from '../constants';
 import { fadeIn, textVariant} from '../utils/motion';
@@ -46,7 +45,7 @@ const About = () => {
 
     <div className='mt-20 flex flex-wrap gap-10'>
       {services.map((elem, index) =>(
-        <ServiceCard key={elem.title} index={index} title={elem.title} icon={elem.icon} {...services} />
+        <ServiceCard key={elem.title} index={index} title={elem.title} icon={elem.icon}  />
 
       ))}
     </div>
@@ -54,4 +53,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SectionWrapper( About, "about" );
