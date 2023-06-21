@@ -5,6 +5,7 @@ import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/d
 
 
 const Ball = (props) => {
+  
   const [decal] = useTexture([props.imageUrl]);
 
   return (
