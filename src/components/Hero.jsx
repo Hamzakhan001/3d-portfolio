@@ -31,7 +31,7 @@ const Hero = () => {
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}> Hi, I am <span className='text-[#915eff]'>Hamza Khan</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop full stack web applications <br className='sm:block hidden'/> from both GIS & non-GIS domains
+            I develop full stack web applications using MERN / MEAN & Django. <br className='sm:block hidden'/> I also posses ability to develop Web GIS applications 
           </p>
         </div>
       </div>
