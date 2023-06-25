@@ -7,6 +7,9 @@ import { logo, menu, close } from '../assets'
 const Navbar = () => {
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
+  useEffect(()=>{
+    console.log("helloactive",active)
+  },[active])
 
   const styles = {
     paddingX: 'sm:px-16 px-6',
