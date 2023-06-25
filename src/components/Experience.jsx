@@ -19,7 +19,7 @@ const ExperienceCard = ({experience}) =>(
     </div>
     }
   >
-    <div>
+    <div className='mt-5'>
       <h3 className='text-white text-[24px] font-bold'>
         {experience.title}
       </h3>
@@ -52,6 +52,7 @@ const Experience = () => {
       <VerticalTimeline>
         {experiences.map((experience, index) =>(
           <ExperienceCard key={index} experience={experience} />
+
         ))}
       </VerticalTimeline>
     </div>

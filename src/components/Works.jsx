@@ -5,6 +5,7 @@ import { projects } from '../constants';
 import { fadeIn,textVariant } from '../utils/motion';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
+import jobit  from "../assets/jobit.png";
 
 
 const ProjectCard = (index, name, description, tags, image, source_code_link) =>{
@@ -19,7 +20,7 @@ const ProjectCard = (index, name, description, tags, image, source_code_link) =>
       className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full "
       >
         <div className='relative w-full h-[230px]'>
-           <img src={image} alt="githublink" className='w-full h-full object-cover rounded-2xl' />
+           <img src={jobit} alt="githublink" className='w-full h-full object-cover rounded-2xl' />
 
            <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
               <div onClick={() => window.open(source_code_link, "_blank")}
@@ -31,18 +32,18 @@ const ProjectCard = (index, name, description, tags, image, source_code_link) =>
            </div>
         </div>
         <div className='mt-5'>
-          <h3 className='text-white font-bold tex-[24px]'>{name} </h3>
+          {/* <h3 className='text-white font-bold tex-[24px]'>{name} </h3> */}
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
+          {/* {projects.tags.map((tag) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               #{tag.name} 
 
 
             </p>
-          ))}
+          ))} */}
 
         </div>
 
@@ -76,7 +77,7 @@ const Works = () => {
    <div className='mt-20 flex flex-wrap gap-7'>
     {projects.map((project, index, name, description, tags, image, source_code_link) => (
       <ProjectCard key={`project-${index}`} index={index}
-      name={name} description={description} tags={tags} image={image}
+      name={name} description={description} tags={tags} image={jobit}
       source_code_link={source_code_link}
       />
     ))}
